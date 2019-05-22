@@ -1,5 +1,5 @@
-import collections
 import operator
+
 
 class User(object):
     def __init__(self, name, email):
@@ -395,12 +395,10 @@ class TomeRater:
         n_books = []
         # sort the book catalog by most reads
         sorted_books = sorted(self.books.items(), key=operator.itemgetter(1), reverse=True)
-        #print(sorted_books)
         # grab 'n' books from the sorted list
         for i in range(n):
             n_books.append(sorted_books[i])
         return n_books
-
 
     def get_n_most_prolific_readers(self, n):
         """
